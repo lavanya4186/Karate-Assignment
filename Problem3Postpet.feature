@@ -7,12 +7,12 @@ Feature: Create a Pet
     Given request
   """
   {
-    "id": 545,
-    "name": "Doggie",
+    "id": 560,
+    "name": "Doggies",
     "status": "available"
   }
   """
     When method post
     Then status 200
-    And match response == {"id":545,"name":"Doggie","photoUrls":[],"tags":[],"status":"available"}
+    And match response == {"id":560,"name":"Doggies","photoUrls":[],"tags":[],"status":"available"}
     And print 'Pet created successfully! ID:', response.id
